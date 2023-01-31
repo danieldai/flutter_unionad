@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_unionad/flutter_unionad.dart';
 
+import '../utils.dart';
+
 class NativeAdView extends StatefulWidget {
   final bool mIsExpress;
   final String androidCodeId;
@@ -60,7 +62,7 @@ class _NativeAdViewState extends State<NativeAdView> {
       return Container(
         width: _width,
         height: _height == 0 ? 0.5 : _height, //高为0的时候不会原生不会加载 默认设为0.5
-        child: AndroidView(
+        child: MyAndroidView(
           viewType: _viewType,
           creationParams: {
             "mIsExpress": widget.mIsExpress,

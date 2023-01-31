@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_unionad/flutter_unionad.dart';
 
+import '../utils.dart';
+
 class BannerAdView extends StatefulWidget {
   final bool mIsExpress;
   final String androidCodeId;
@@ -64,7 +66,7 @@ class _BannerAdViewState extends State<BannerAdView> {
       return Container(
         width: _width,
         height: _height,
-        child: AndroidView(
+        child: MyAndroidView(
           viewType: _viewType,
           creationParams: {
             "mIsExpress": widget.mIsExpress,
